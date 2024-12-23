@@ -42,7 +42,20 @@ h1 {
   width: 50%;
   text-align: left;
 }
-@media (max-width: 600px) {
+.howitworks-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.howitworks-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
   h1 {
     font-size: 80px;
   }
@@ -57,6 +70,9 @@ h1 {
     width: 100%;
     text-align: center;
   }
+  .howitworks img {
+    border-radius: 10px;
+  }
   .howitworks2 {
     display: flex;
     flex-direction: column-reverse;
@@ -69,7 +85,12 @@ h1 {
   .howitworks-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+  }
+  .howitworks-container section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 h2 {

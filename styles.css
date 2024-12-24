@@ -8,9 +8,13 @@
 html,
 body {
   width: 100vw;
-  height: 500vh;
+  height: 400vh;
 }
-
+/* body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
 img {
   width: 100%;
   height: 100%;
@@ -36,7 +40,7 @@ h1 {
 }
 .howitworks2 {
   flex-direction: row-reverse;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 .howitworks p {
   width: 50%;
@@ -47,12 +51,17 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-.howitworks-container {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+.howitworks-container img {
+  width: 50%;
+  min-width: 200px;
+  max-width: 500px;
+}
+.howitworks-container img {
+  width: 50%;
+  min-width: 200px;
+  max-width: 500px;
 }
 
 @media (max-width: 700px) {
@@ -61,6 +70,7 @@ h1 {
   }
   h2 {
     font-size: 15px;
+    width: 50%;
   }
   .howitworks {
     flex-direction: column-reverse;
@@ -82,10 +92,12 @@ h1 {
   .howitworks2 p {
     text-align: center;
   }
-  .howitworks-container {
+  .howitworks-container .sec {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0px;
+    height: 60vh;
   }
   .howitworks-container section {
     display: flex;
@@ -93,12 +105,36 @@ h1 {
     align-items: center;
   }
 }
+.kids-gallery {
+  max-width: 1200px;
+  display: grid;
+  gap: 10px;
+}
+.kids-gallery img {
+  width: 50%;
+  min-width: 200px;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #a5a5a5;
+}
+@media (min-width: 600px) {
+  .kids-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .kids-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 h2 {
   font-size: 25px;
   font-weight: 500;
   text-align: center;
-  width: 100%;
-  min-width: 200px;
+  width: 90%;
+  min-width: 100px;
   max-width: 700px;
   font-weight: bold;
   line-height: 100%;

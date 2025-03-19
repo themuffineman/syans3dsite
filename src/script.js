@@ -334,40 +334,40 @@ initAnimation();
 // }
 // bgInit();
 
-function setCanvasImage(canvas, imagePath, maintainAspectRatio = true) {
-  const ctx = canvas.getContext("2d");
-  const img = new Image();
-  img.src = imagePath;
+// function setCanvasImage(canvas, imagePath, maintainAspectRatio = true) {
+//   const ctx = canvas.getContext("2d");
+//   const img = new Image();
+//   img.src = imagePath;
 
-  img.onload = function () {
-    const canvasWidth = canvas.width;
-    const canvasHeight = canvas.height;
+//   img.onload = function () {
+//     const canvasWidth = canvas.width;
+//     const canvasHeight = canvas.height;
 
-    if (maintainAspectRatio) {
-      const aspectRatio = img.width / img.height;
-      let width = canvasWidth;
-      let height = canvasWidth / aspectRatio;
+//     if (maintainAspectRatio) {
+//       const aspectRatio = img.width / img.height;
+//       let width = canvasWidth;
+//       let height = canvasWidth / aspectRatio;
 
-      if (height > canvasHeight) {
-        height = canvasHeight;
-        width = canvasHeight * aspectRatio;
-      }
+//       if (height > canvasHeight) {
+//         height = canvasHeight;
+//         width = canvasHeight * aspectRatio;
+//       }
 
-      const offsetX = (canvasWidth - width) / 2;
-      const offsetY = (canvasHeight - height) / 2;
+//       const offsetX = (canvasWidth - width) / 2;
+//       const offsetY = (canvasHeight - height) / 2;
 
-      ctx.clearRect(0, 0, canvasWidth, canvasHeight); // Clear canvas
-      ctx.drawImage(img, offsetX, offsetY, width, height);
-    } else {
-      ctx.clearRect(0, 0, canvasWidth, canvasHeight); // Clear canvas
-      ctx.drawImage(img, 0, 0, canvasWidth, canvasHeight);
-    }
-  };
+//       ctx.clearRect(0, 0, canvasWidth, canvasHeight); // Clear canvas
+//       ctx.drawImage(img, offsetX, offsetY, width, height);
+//     } else {
+//       ctx.clearRect(0, 0, canvasWidth, canvasHeight); // Clear canvas
+//       ctx.drawImage(img, 0, 0, canvasWidth, canvasHeight);
+//     }
+//   };
 
-  img.onerror = function () {
-    console.error(`Failed to load image: ${imagePath}`);
-  };
-}
+//   img.onerror = function () {
+//     console.error(`Failed to load image: ${imagePath}`);
+//   };
+// }
 // function initBg() {
 //   const canvas = document.querySelector("canvas");
 //   const imagePath = "./assets/sky-bg.jpg";
